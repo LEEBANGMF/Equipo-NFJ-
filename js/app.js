@@ -1,23 +1,15 @@
-function cambiarColor(){
+const tarjetas = document.querySelectorAll(".card");
 
-let encabezado =
-document.querySelector("header");
+window.onload = function(){
 
-if(
-encabezado.style.background
-=="rgb(45, 140, 255)"
-){
+tarjetas.forEach(function(tarjeta, i){
 
-encabezado.style.background=
-"#091322";
+setTimeout(function(){
 
-}
+tarjeta.classList.add("mostrar");
 
-else{
+}, i * 400);
 
-encabezado.style.background=
-"#2d8cff";
+});
 
-}
-
-}
+};
