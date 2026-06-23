@@ -1,57 +1,59 @@
 const tarjetas = document.querySelectorAll(".card");
 
-window.onload = function(){
-
-tarjetas.forEach(function(tarjeta, i){
-
-setTimeout(function(){
-
-tarjeta.classList.add("mostrar");
-
-}, i * 400);
-
-});
-
-<<<<<<< HEAD
+window.onload = function () {
+  tarjetas.forEach(function (tarjeta, i) {
+    setTimeout(function () {
+      tarjeta.classList.add("mostrar");
+    }, i * 300);
+  });
 };
-=======
-}
 
-}
 document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-contacto");
+  const respuesta = document.getElementById("msg-respuesta");
 
-  const formulario = document.getElementById("formulario");
-  const nombre = document.getElementById("nombre");
-  const correo = document.getElementById("correo");
-
-  // Si no existe el formulario, no hacer nada
-  if (!formulario || !nombre || !correo) {
+  if (!form || !respuesta) {
     return;
   }
 
-  // Recuperar datos guardados
-  nombre.value = localStorage.getItem("nombre") || "";
-  correo.value = localStorage.getItem("correo") || "";
-
-  formulario.addEventListener("submit", (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (nombre.value.trim() === "") {
-      alert("El nombre es obligatorio.");
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (!nombre || !email || !mensaje) {
+      mostrarMensaje("Por favor completa todos los campos.", "error");
       return;
     }
 
-    if (correo.value.trim() === "") {
-      alert("El correo es obligatorio.");
+    if (!validarEmail(email)) {
+      mostrarMensaje("Escribe un correo electrónico válido.", "error");
       return;
     }
 
-    // Guardar en localStorage
-    localStorage.setItem("nombre", nombre.value);
-    localStorage.setItem("correo", correo.value);
+    guardarEnStorage({ nombre, email, mensaje });
 
-    alert("Datos guardados correctamente.");
+    mostrarMensaje("¡Mensaje enviado correctamente!", "exito");
+    form.reset();
   });
-
 });
->>>>>>> conflicto-js
+
+function validarEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+function mostrarMensaje(texto, tipo) {
+  const respuesta = document.getElementById("msg-respuesta");
+  respuesta.textContent = texto;
+  respuesta.className = tipo === "error" ? "msg-error" : "msg-exito";
+}
+
+function guardarEnStorage(datos) {
+  const mensajes = JSON.parse(localStorage.getItem("mensajes-contacto")) || [];
+  datos.fecha = new Date().toLocaleString("es-MX");
+  mensajes.push(datos);
+  localStorage.setItem("mensajes-contacto", JSON.stringify(mensajes));
+}

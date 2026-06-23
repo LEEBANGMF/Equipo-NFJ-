@@ -1,244 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portal del Equipo 3</title>
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal del Equipo 3</title>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
 <header>
+  <h1>Portal del Equipo 3</h1>
+  <p>Demostración práctica de GitHub Flow en Acción</p>
 
-<h1>Portal del Equipo 3</h1>
-
-<p>Demostración práctica de GitHub Flow en Acción</p>
-
-<nav>
+  <nav>
     <ul>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
-</nav>
-
+  </nav>
 </header>
-
 
 <main>
 
-
-<section id="equipo">
-
-<h2>Nuestro Equipo de Desarrollo</h2>
-
-<p class="texto">
-Bienvenido a nuestra página web colaborativa.
-Este sitio fue construido utilizando Git y GitHub aplicando buenas prácticas
-de revisión de código mediante Pull Requests y GitHub Flow.
-</p>
-
-
-<div class="contenedor">
-
-
-<div class="card">
-<h3>Nombre:</h3>
-<h4>Flor Mendoza Hernandez</h4>
-<p>ROL LÍDER / INTEGRADOR</p>
-</div>
-
-
-<div class="card">
-<h3>Nombre:</h3>
-<h4>Noe Maqueda Gonzalez</h4>
-<p>ROL DISEÑADOR CSS</p>
-</div>
-
-
-<div class="card">
-<h3>Nombre:</h3>
-<h4>Jhoana Martinez Lopez</h4>
-<p>ROL REDACTOR HTML</p>
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section id="portafolio">
-
-<h2>Portafolio</h2>
-
-<p>
-Proyectos realizados por el equipo utilizando herramientas de desarrollo web.
-</p>
-
-
-<button onclick="cambiarColor()">
-Cambiar color
-</button>
-
-</header>
-
-<section>
-
-<h2>
-Nuestro Equipo de Desarrollo
-</h2>
-
-<p class="texto">
-Bienvenido a nuestra página web colaborativa.
-
-Este sitio fue construido utilizando Git y GitHub
-aplicando buenas prácticas mediante Pull Requests.
-</p>
-
-<div class="contenedor">
-
-<div class="card">
-
-<h3>Proyecto GitHub Flow</h3>
-
-<p>
-Implementación de control de versiones usando ramas,
-commits y Pull Requests.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Diseño Web</h3>
-
-<p>
-Creación de interfaces utilizando HTML y CSS.
-</p>
-
-</div>
-
-<h3>Nombre:</h3>
-<h4>flor</h4>
-<p>ROL LÍDER / INTEGRADOR</p>
-</div>
-
-<div class="card">
-<h3>Nombre:</h3>
-<h4>noe</h4>
-<p>ROL DISEÑADOR CSS</p>
-</div>
-
-<div class="card">
-<h3>Nombre:</h3>
-<h4>jhoana</h4>
-<p>ROL REDACTOR HTML</p>
-</div>
-
-</div>
-
-<!-- Formulario agregado -->
-<h2>Formulario de Contacto</h2>
-
-</section>
-
-
-
-
-<section id="contacto">
-
-<h2>Formulario de contacto</h2>
-
-
-<form>
-
-
-<label for="nombre">
-Nombre:
-</label>
-
-<input 
-id="nombre"
-type="text"
-name="nombre"
-required>
-
-
-
-<label for="correo">
-Correo:
-</label>
-
-<input 
-id="correo"
-type="email"
-name="correo"
-required>
-
-
-
-<label for="mensaje">
-Mensaje:
-</label>
-
-<textarea 
-id="mensaje"
-name="mensaje">
-</textarea>
-
-
-<button type="submit">
-Enviar
-</button>
-
-
-</form>
-
-
-</section>
-
-
+  <section id="equipo" aria-labelledby="titulo-equipo">
+    <h2 id="titulo-equipo">Nuestro Equipo de Desarrollo</h2>
+
+    <p class="texto">
+      Bienvenido a nuestra página web colaborativa.
+      Este sitio fue construido utilizando Git y GitHub aplicando buenas prácticas
+      mediante Pull Requests y GitHub Flow.
+    </p>
+
+    <div class="contenedor">
+      <article class="card">
+        <h3>Flor Mendoza Hernández</h3>
+        <p>ROL LÍDER / INTEGRADOR</p>
+      </article>
+
+      <article class="card">
+        <h3>Noe Maqueda González</h3>
+        <p>ROL DISEÑADOR CSS</p>
+      </article>
+
+      <article class="card">
+        <h3>Jhoana Martínez López</h3>
+        <p>ROL HTML / JS</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="portafolio" aria-labelledby="titulo-portafolio">
+    <h2 id="titulo-portafolio">Nuestro Portafolio</h2>
+
+    <p class="texto">
+      Proyectos realizados por el equipo utilizando herramientas de desarrollo web.
+    </p>
+
+    <div class="contenedor">
+      <article class="card proyecto-card">
+        <figure>
+          <img src="https://thfvnext.bing.com/th/id/R.72ed0ce7c7b027d3ec40994ea3a32928?rik=b5ZEJO3vHzqWiw&pid=ImgRaw&r=0" alt="Captura del proyecto GitHub Flow">
+          <figcaption>GitHub Flow</figcaption>
+        </figure>
+        <h3>Proyecto GitHub Flow</h3>
+        <p>Uso de ramas, commits y Pull Requests.</p>
+        <a href="#" class="btn-ver">Ver proyecto</a>
+      </article>
+
+      <article class="card proyecto-card">
+        <figure>
+          <img src="https://images.openai.com/static-rsc-4/v-VaJM7kH0NxIL3oec3v9wNPE5BgXvO4TPbtcQmhA7rA7A9QRTQJjpu-VuXiNQca1lVBtW1rhACmclHvViZQbtTfh1pvOOw6MtdK8wNhjby-kqRQ0nxB3F_HbImntsj2X8O20q6ij4ZvDpklhWQPrCfQc-BEkbcXdGAiPWgWnIorIQHtvlUQwapfQu28nkv8?purpose=fullsize" alt="Captura del proyecto de diseño web">
+          <figcaption>Diseño Web</figcaption>
+        </figure>
+        <h3>Diseño Web</h3>
+        <p>Creación de interfaces con HTML y CSS.</p>
+        <a href="#" class="btn-ver">Ver proyecto</a>
+      </article>
+
+      <article class="card proyecto-card">
+        <figure>
+          <img src="https://images.openai.com/static-rsc-4/v-VaJM7kH0NxIL3oec3v9wNPE5BgXvO4TPbtcQmhA7rA7A9QRTQJjpu-VuXiNQca1lVBtW1rhACmclHvViZQbtTfh1pvOOw6MtdK8wNhjby-kqRQ0nxB3F_HbImntsj2X8O20q6ij4ZvDpklhWQPrCfQc-BEkbcXdGAiPWgWnIorIQHtvlUQwapfQu28nkv8?purpose=fullsize" alt="Captura del proyecto de formulario">
+          <figcaption>Formulario</figcaption>
+        </figure>
+        <h3>Formulario JS</h3>
+        <p>Validación de datos y uso de localStorage.</p>
+        <a href="#" class="btn-ver">Ver proyecto</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contacto" aria-labelledby="titulo-contacto">
+    <h2 id="titulo-contacto">Contáctanos</h2>
+
+    <form id="form-contacto" novalidate>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar</button>
+
+      <p id="msg-respuesta" aria-live="polite"></p>
+    </form>
+  </section>
 
 </main>
 
-
-
-<form id="formulario">
-  <label for="nombre">Nombre:</label><br>
-  <input
-    type="text"
-    id="nombre"
-    name="nombre"
-    required
-  ><br><br>
-
-  <label for="correo">Correo:</label><br>
-  <input
-    type="email"
-    id="correo"
-    name="correo"
-    required
-  ><br><br>
-
-  <button type="submit">Guardar</button>
-</form>
-
-</section>
-
 <footer>
-© 2026 · Clase de Git y GitHub Flow
+  © 2026 · Portal del Equipo 3 · GitHub Flow
 </footer>
-
-
-<script src="js/app.js"></script>
 
 <script src="js/app.js"></script>
 
 </body>
-
 </html>
