@@ -80,8 +80,26 @@ Proyectos realizados por el equipo utilizando herramientas de desarrollo web.
 </p>
 
 
-<div class="contenedor">
+<button onclick="cambiarColor()">
+Cambiar color
+</button>
 
+</header>
+
+<section>
+
+<h2>
+Nuestro Equipo de Desarrollo
+</h2>
+
+<p class="texto">
+Bienvenido a nuestra página web colaborativa.
+
+Este sitio fue construido utilizando Git y GitHub
+aplicando buenas prácticas mediante Pull Requests.
+</p>
+
+<div class="contenedor">
 
 <div class="card">
 
@@ -105,9 +123,27 @@ Creación de interfaces utilizando HTML y CSS.
 
 </div>
 
+<h3>Nombre:</h3>
+<h4>flor</h4>
+<p>ROL LÍDER / INTEGRADOR</p>
+</div>
+
+<div class="card">
+<h3>Nombre:</h3>
+<h4>noe</h4>
+<p>ROL DISEÑADOR CSS</p>
+</div>
+
+<div class="card">
+<h3>Nombre:</h3>
+<h4>jhoana</h4>
+<p>ROL REDACTOR HTML</p>
+</div>
 
 </div>
 
+<!-- Formulario agregado -->
+<h2>Formulario de Contacto</h2>
 
 </section>
 
@@ -172,15 +208,36 @@ Enviar
 
 
 
+<form id="formulario">
+  <label for="nombre">Nombre:</label><br>
+  <input
+    type="text"
+    id="nombre"
+    name="nombre"
+    required
+  ><br><br>
+
+  <label for="correo">Correo:</label><br>
+  <input
+    type="email"
+    id="correo"
+    name="correo"
+    required
+  ><br><br>
+
+  <button type="submit">Guardar</button>
+</form>
+
+</section>
+
 <footer>
-
 © 2026 · Clase de Git y GitHub Flow
-
 </footer>
 
 
 <script src="js/app.js"></script>
 
+<script src="js/app.js"></script>
 
 </body>
 
