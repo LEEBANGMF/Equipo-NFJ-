@@ -26,10 +26,46 @@ Proyecto desarrollado para la práctica de GitHub Flow y trabajo colaborativo ut
 * Persistencia de datos mediante localStorage.
 
 ## Clonar repositorio mediante SSH
+# Instrucciones de clonado por SSH
+
+## Requisitos
+
+* Tener Git instalado.
+* Tener una clave SSH configurada y agregada a GitHub.
+
+## Clonar el repositorio
+
+Ejecuta el siguiente comando en la terminal:
 
 ```bash
 git clone git@github.com:LEEBANGMF/Equipo-NFJ-.git
 ```
+
+## Acceder al proyecto
+
+```bash
+cd Equipo-NFJ-
+```
+
+## Verificar el repositorio remoto
+
+```bash
+git remote -v
+```
+
+Deberá mostrarse una URL similar a:
+
+```bash
+origin  git@github.com:LEEBANGMF/Equipo-NFJ-.git (fetch)
+origin  git@github.com:LEEBANGMF/Equipo-NFJ-.git (push)
+```
+
+## Obtener actualizaciones del repositorio
+
+```bash
+git pull origin main
+```
+
 
 ## Flujo de trabajo
 
